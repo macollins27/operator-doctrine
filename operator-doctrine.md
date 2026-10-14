@@ -8,9 +8,9 @@
 
 This is a method for putting AI agents to work on things that matter: software, a phone line, a company's records, a public campaign, a research pipeline. It is written for the person responsible for the result, whether or not that person can read what the agent produces. Its author cannot read code and has directed agents across thousands of recorded sessions, so the method never rests on the operator reading the work. It rests on arranging the work so that the agent's word is never the thing you have to trust.
 
-Each rule below is tied to the incident that produced it. The incidents come from one operator's project records. They cannot be checked from this document, and they are given so that the rules have reasons, not as proof. The figures in section 13 are a different matter: each names what measured it. The author could not read the artifacts behind the incidents; each was established by an agent that was not involved reading the record, and where the record is a mechanism's output (a ledger row, an exit code, a screenshot) the author read that. A reader takes this on the same terms as any practitioner's report, and section 10 says what would show it wrong.
+Each rule below is tied to the incident that produced it. The incidents come from one operator's project records. They cannot be checked from this document, and they are given so that the rules have reasons, not as proof. The figures in section 13 are a different matter: each names what measured it. How the incidents were established, given that the author cannot read the artifacts, and what would show the document wrong, are in section 10.
 
-The first edition of this document, published in June 2026, is kept in this repository under a superseded marker, with one section removed. This edition replaces it. What was withdrawn and why is in section 14. Section 12 is the document condensed to twelve lines for an agent to hold as operating defaults.
+The first edition of this document, published in June 2026, is kept in this repository under a superseded marker, with one section removed. This edition replaces it. What was withdrawn and why is in section 14. Section 12 is the document condensed to thirteen lines for an agent to hold as operating defaults.
 
 ---
 
@@ -143,7 +143,7 @@ An eighth disposition belongs to the operator, not the agent. **Accepting the ag
 
 **Plain words, with the evidence attached beneath.** What reaches the owner is the meaning of what the agent did, not a retelling of its report: what it means for them, what was left out, where the work really stands, what should happen next. The citations live in the record and travel with the message; they are not the message. Status is computed from receipts and never typed.
 
-**Money never moves by itself.** No refund, charge or outward send happens without a person's decision or physical evidence, and this is not a trust level to grow out of.
+**Money never moves by itself.** No refund, charge or outward send is initiated by an agent without a person's decision or physical evidence, and this is not a trust level to grow out of. A customer paying through the system is the person's own act; the rule guards movement the agent would start.
 
 ---
 
@@ -167,7 +167,7 @@ The method is not free, and a doctrine that does not say what it costs is dogma.
 
 **The friction is measurable, and most of it is the guards testing themselves.** The enforcement ledgers of seven of one operator's projects held 371,817 recorded refusals when counted in October 2026. The large majority are the guards re-proving their contracts on every run, which is the point of section 3. The refusals of agents' real work are a small fraction, and each of those is a turn spent. A new rule costs review rounds; the money domain of one design went through four rounds with two fresh reviewers before every quoted citation matched its source. The working expectation is two to four review rounds per unit of work, written into the handoff. First-pass quality is not expected.
 
-**The most expensive failure in the record is a loop that retries itself.** An unattended loop that retried on its own ran through hundreds of thousands of dead attempts before it was caught. A failure that would fail the same way again (a bad credential, a missing file, a refused permission) is never retried. A transient failure (a network error, a rate limit) is retried a bounded number of times with the attempts recorded, then parked loudly. Scheduled AI work gets a persistent circuit breaker from its first day. Spending limits count work done, not days elapsed.
+**The most expensive failure in the record is a loop that retries itself.** On 2 June 2026 an unattended daemon that retried on its own produced about 370,000 junk transcripts, 8.7 gigabytes, in about a day before it was caught, counted on disk afterwards. The resemblance to the ledger figure above is coincidence; they are different counts from different projects. A failure that would fail the same way again (a bad credential, a missing file, a refused permission) is never retried. A transient failure (a network error, a rate limit) is retried a bounded number of times with the attempts recorded, then parked loudly. Scheduled AI work gets a persistent circuit breaker from its first day. Spending limits count work done, not days elapsed.
 
 **A session can grow too long and costly to continue.** Context rot makes a long session worse at its own job. The signs are the same corrections repeating, an orchestrator fixing from memory, and effort flowing into a wrong target. There is no fixed hour at which this happens. The remedy when the signs appear is to stop at a clean boundary, record the state to disk, and start fresh from the record.
 
@@ -181,6 +181,8 @@ This method has one practitioner. It has been run across many projects and sever
 
 The author cannot read the artifacts behind the incidents in sections 2 to 8. Each was established by an agent that was not involved, reading the record, and the author read the mechanism's output where there was one. That is the standard the method sets for every other claim, and a reader is right to hold the document to it: the incidents are a practitioner's report, not evidence a stranger can check.
 
+The phone result in section 13 was scored by a model classifying transcripts. The scorer's inputs carry tests, added after it silently dropped half an agent's turns for six months, but there is no set of known-good and known-bad calls that the scorer must label correctly before a run counts. By section 3 that is a check that has not been proven to bite, and the figure should be read with that in mind.
+
 The refusal count in section 9 is mostly the guards' own self-tests. Session-attributed refusals of real work, the true floor of enforcement, are a small fraction and have only been counted since attribution existed.
 
 Drift between agents is managed, not solved. One persistent author owns a specification from vision to plan, and helpers gather and attack but never author, which reduces re-interpretation at each hand-off. It does not remove it.
@@ -189,7 +191,7 @@ Two agents of the same model under the same instruction files share a training, 
 
 No enforcement is total. What a guard cannot see (a redirect inside a command, a path built at run time) is written down by class, with which other layer catches it and what is left to the agent's obedience. The honest residual is stated, because pretending enforcement is total is how breaches happen.
 
-**What would show this document wrong.** Two conditions. If an incident class recurs through a path its guard covers, after that guard has reached the fifth place in section 2 or lower, the claim that the lower places end a class is wrong; a recurrence through a path listed as residual does not count, and a residual list that grows to cover each recurrence is itself the refutation. And if a second practitioner runs the method on their own record and the seven dispositions in section 5 do not recur there under pressure, with the same tells and the same cost, then the dispositions are an artifact of one operator's harness and not of the model. The words appearing once is not the dispositions appearing.
+**What would show this document wrong.** Two conditions. If an incident class recurs through a path its guard covers, after that guard has reached the fifth place in section 2 or lower, the claim that the lower places end a class is wrong. A recurrence through a path listed as residual does not count, and a residual list that grows to cover each recurrence is itself the refutation. The first recurrence may be blamed on a buggy mechanism; the second may not. And if a second practitioner's raw sessions, outside any of these mechanisms, do not show the seven dispositions in section 5 recurring under pressure with the same tells and the same cost, then the dispositions are an artifact of one operator's harness and not of the model. Sessions inside the enclosure cannot test this, because the enclosure is built to suppress them. The words appearing once is not the dispositions appearing.
 
 ---
 
@@ -217,6 +219,7 @@ This section is prose, the weakest place in section 2, and it knows it. It carri
 10. "I can't" requires the exact tool tried and the exact error returned. Start what can be started. A permission denial, a safety boundary, a missing credential or a person needed in a browser is a stop; report it and wait. (5)
 11. A failure is a probe into the system, not a thing to patch. Diagnose exhaustively from uncontaminated context; change minimally; the right change may add, remove or leave alone. Never rewrite what works. Never delete from the record without recording the redaction. (8)
 12. Watch the cost. Never retry a failure that would fail the same way; retry a transient one a bounded number of times, recorded. When the signs of a polluted session appear, stop at a clean boundary with the state on disk. (9)
+13. When you notice you are about to act against one of these lines and nothing refuses you, that is a case the mechanisms could not see. Stop and say so. That report is the incident the next guard is earned from. (8, 10)
 
 ---
 
@@ -226,7 +229,7 @@ These figures are the size of the record the incidents come from, and what some 
 
 - 4,879 AI sessions and 5,507 agents dispatched inside them, 11 January to 13 September 2026, counted by a census program the author wrote over the raw session transcripts on one machine.
 - A booking and payment system for a real business that took over a front office previously run by hand and has been in daily use since November 2025, with real bookings and real money. The practices in this document were in use on it before they were written down; the first edition dates the writing, not the practice. Its incident log is its own and is referred to in section 14.
-- A phone receptionist whose calls handed to staff fell from about six in ten to about one in ten, and whose captured leads rose from about one in nine to about three in four. Measured on 857 calls over the life of the agent, scored from their transcripts by an automated pipeline after robocalls were removed; the scoring is a model's classification and the pipeline's inputs carry their own tests.
+- A phone receptionist whose calls handed to staff fell from about six in ten to about one in ten, and whose captured leads rose from about one in nine to about three in four. Measured on 857 calls over the life of the agent, scored from their transcripts by an automated pipeline after robocalls were removed. The scoring is a model's classification, and section 10 says what that check has not been proven to do.
 - A company's operations workspace kept current by scheduled agents for thirteen weeks unattended beside the administrator who edits it daily. The 1,564 edits the administrator made in the measured four weeks were preserved, and a full copy was taken on 89 of 90 nights, counted from the job log and the copies.
 - A multi-customer proposal product whose pricing reproduced a real signed five-year agreement line by line, judged by an examiner in a separate repository that the builders cannot write to, on 87 scored assertions.
 - The incidents in this document, each of which cost time, money or trust before it became a rule.

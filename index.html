@@ -92,16 +92,13 @@ the thing you have to trust.</p>
 incidents come from one operator’s project records. They cannot be
 checked from this document, and they are given so that the rules have
 reasons, not as proof. The figures in section 13 are a different matter:
-each names what measured it. The author could not read the artifacts
-behind the incidents; each was established by an agent that was not
-involved reading the record, and where the record is a mechanism’s
-output (a ledger row, an exit code, a screenshot) the author read that.
-A reader takes this on the same terms as any practitioner’s report, and
-section 10 says what would show it wrong.</p>
+each names what measured it. How the incidents were established, given
+that the author cannot read the artifacts, and what would show the
+document wrong, are in section 10.</p>
 <p>The first edition of this document, published in June 2026, is kept
 in this repository under a superseded marker, with one section removed.
 This edition replaces it. What was withdrawn and why is in section 14.
-Section 12 is the document condensed to twelve lines for an agent to
+Section 12 is the document condensed to thirteen lines for an agent to
 hold as operating defaults.</p>
 <hr />
 <h2 id="three-facts-about-the-agent">1. Three facts about the agent</h2>
@@ -528,8 +525,10 @@ where the work really stands, what should happen next. The citations
 live in the record and travel with the message; they are not the
 message. Status is computed from receipts and never typed.</p>
 <p><strong>Money never moves by itself.</strong> No refund, charge or
-outward send happens without a person’s decision or physical evidence,
-and this is not a trust level to grow out of.</p>
+outward send is initiated by an agent without a person’s decision or
+physical evidence, and this is not a trust level to grow out of. A
+customer paying through the system is the person’s own act; the rule
+guards movement the agent would start.</p>
 <hr />
 <h2 id="stewardship">8. Stewardship</h2>
 <p><strong>Rules are earned from incidents, never invented.</strong> A
@@ -592,14 +591,17 @@ citation matched its source. The working expectation is two to four
 review rounds per unit of work, written into the handoff. First-pass
 quality is not expected.</p>
 <p><strong>The most expensive failure in the record is a loop that
-retries itself.</strong> An unattended loop that retried on its own ran
-through hundreds of thousands of dead attempts before it was caught. A
-failure that would fail the same way again (a bad credential, a missing
-file, a refused permission) is never retried. A transient failure (a
-network error, a rate limit) is retried a bounded number of times with
-the attempts recorded, then parked loudly. Scheduled AI work gets a
-persistent circuit breaker from its first day. Spending limits count
-work done, not days elapsed.</p>
+retries itself.</strong> On 2 June 2026 an unattended daemon that
+retried on its own produced about 370,000 junk transcripts, 8.7
+gigabytes, in about a day before it was caught, counted on disk
+afterwards. The resemblance to the ledger figure above is coincidence;
+they are different counts from different projects. A failure that would
+fail the same way again (a bad credential, a missing file, a refused
+permission) is never retried. A transient failure (a network error, a
+rate limit) is retried a bounded number of times with the attempts
+recorded, then parked loudly. Scheduled AI work gets a persistent
+circuit breaker from its first day. Spending limits count work done, not
+days elapsed.</p>
 <p><strong>A session can grow too long and costly to continue.</strong>
 Context rot makes a long session worse at its own job. The signs are the
 same corrections repeating, an orchestrator fixing from memory, and
@@ -626,6 +628,12 @@ the record, and the author read the mechanism’s output where there was
 one. That is the standard the method sets for every other claim, and a
 reader is right to hold the document to it: the incidents are a
 practitioner’s report, not evidence a stranger can check.</p>
+<p>The phone result in section 13 was scored by a model classifying
+transcripts. The scorer’s inputs carry tests, added after it silently
+dropped half an agent’s turns for six months, but there is no set of
+known-good and known-bad calls that the scorer must label correctly
+before a run counts. By section 3 that is a check that has not been
+proven to bite, and the figure should be read with that in mind.</p>
 <p>The refusal count in section 9 is mostly the guards’ own self-tests.
 Session-attributed refusals of real work, the true floor of enforcement,
 are a small fraction and have only been counted since attribution
@@ -648,14 +656,16 @@ how breaches happen.</p>
 <p><strong>What would show this document wrong.</strong> Two conditions.
 If an incident class recurs through a path its guard covers, after that
 guard has reached the fifth place in section 2 or lower, the claim that
-the lower places end a class is wrong; a recurrence through a path
+the lower places end a class is wrong. A recurrence through a path
 listed as residual does not count, and a residual list that grows to
-cover each recurrence is itself the refutation. And if a second
-practitioner runs the method on their own record and the seven
-dispositions in section 5 do not recur there under pressure, with the
-same tells and the same cost, then the dispositions are an artifact of
-one operator’s harness and not of the model. The words appearing once is
-not the dispositions appearing.</p>
+cover each recurrence is itself the refutation. The first recurrence may
+be blamed on a buggy mechanism; the second may not. And if a second
+practitioner’s raw sessions, outside any of these mechanisms, do not
+show the seven dispositions in section 5 recurring under pressure with
+the same tells and the same cost, then the dispositions are an artifact
+of one operator’s harness and not of the model. Sessions inside the
+enclosure cannot test this, because the enclosure is built to suppress
+them. The words appearing once is not the dispositions appearing.</p>
 <hr />
 <h2 id="the-claim-this-rests-on">11. The claim this rests on</h2>
 <p>The second fact in section 1, that a model is trained to look done
@@ -723,6 +733,10 @@ delete from the record without recording the redaction. (8)</li>
 retry a transient one a bounded number of times, recorded. When the
 signs of a polluted session appear, stop at a clean boundary with the
 state on disk. (9)</li>
+<li>When you notice you are about to act against one of these lines and
+nothing refuses you, that is a case the mechanisms could not see. Stop
+and say so. That report is the incident the next guard is earned from.
+(8, 10)</li>
 </ol>
 <hr />
 <h2 id="the-record-this-was-written-from">13. The record this was
@@ -746,8 +760,8 @@ and is referred to in section 14.</li>
 in ten to about one in ten, and whose captured leads rose from about one
 in nine to about three in four. Measured on 857 calls over the life of
 the agent, scored from their transcripts by an automated pipeline after
-robocalls were removed; the scoring is a model’s classification and the
-pipeline’s inputs carry their own tests.</li>
+robocalls were removed. The scoring is a model’s classification, and
+section 10 says what that check has not been proven to do.</li>
 <li>A company’s operations workspace kept current by scheduled agents
 for thirteen weeks unattended beside the administrator who edits it
 daily. The 1,564 edits the administrator made in the measured four weeks
