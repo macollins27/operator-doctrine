@@ -194,13 +194,9 @@ The disciplines above have matured, in the most recent system, past "blocked" in
 
 ---
 
-## 6. The generalization: reading any agent by its behavior under pressure
+## 6. [Withdrawn]
 
-The newest and most important move extends the entire method past AI. The same discipline — observe behavior, do not trust stated agreement, design around the real disposition — was pointed at a **human** who is a load-bearing node in the system: a process gatekeeper who controls whether a pipeline gets adopted.
-
-An evidence-grounded behavioral profile was built from a 77-minute meeting transcript, explicitly **behavior-over-words and adversarial**: the polite, agreeable language was read as *pressure-release valves, not agreement*, and the verdict was that 77 minutes of evidence had moved the person's actual position zero degrees. The operator then engineered the approach around the real behavior rather than the stated one.
-
-This is the tell that the discipline was never really about AI. **It is a way of reading any agent in a system — model or person — by its behavior under pressure rather than by its words, and then engineering the environment so that behavior produces the outcome you need.** The truth hierarchy applies to people too: what they *do* is tool output; what they *say* is narration. That reframing is the real subject of mastery. "Operating AI" is the first and clearest instance of it, not the whole of it.
+This section was withdrawn on 2026-10-13 as unfit for publication and removed from this archived copy. See section 14 of the second edition.
 
 ---
 
@@ -242,7 +238,7 @@ An agent loading this should hold the following as operating defaults:
 9. A failure is a probe into the system, not a thing to patch. Diagnose exhaustively from uncontaminated context; intervene minimally. The right fix is additive, subtractive, or nothing.
 10. Don't pre-engineer guards; earn them from incidents. Don't rewrite what works; add to it. Don't remove load-bearing infrastructure without a replacement.
 11. When a rule must be enforced, promote it down the ladder until the failure can't recur: memory → hook → lint (won't-merge) → type (won't-compile). Warn is invisible; block. Layer enforcement; demonstrate it, don't claim it.
-12. Read every agent — model or human — by its behavior under pressure, not its words. Agreeable words are not agreement.
+12. [Withdrawn with section 6.]
 
 ---
 

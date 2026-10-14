@@ -16,7 +16,7 @@ How to get true work out of AI agents, in any field. Second edition, October 202
 
 A method for putting AI agents to work on things that matter, written for the person responsible for the result, whether or not that person can read what the agent produces. One rule, the eight places an answer can live, the test of every check, the seven ways agents fail and what each became, who checks whom, what reaches a person, stewardship, cost, and what is not proven. Every rule carries the incident that paid for it.
 
-The first edition (June 2026) is kept under `editions/` with a superseded marker. Section 13 of the second edition lists what was withdrawn from it and why.
+The first edition (June 2026) is kept under `editions/` as markdown with a superseded marker and one section removed. Section 14 of the second edition lists what was withdrawn from it and why.
 
 ## License
 
