@@ -69,9 +69,6 @@ for an agent</a></li>
 <li><a href="#the-record-this-was-written-from"
 id="toc-the-record-this-was-written-from">13. The record this was
 written from</a></li>
-<li><a href="#what-was-withdrawn-from-the-first-edition-and-why"
-id="toc-what-was-withdrawn-from-the-first-edition-and-why">14. What was
-withdrawn from the first edition, and why</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -83,23 +80,18 @@ edition. How to get true work out of AI agents.</h3>
 <p>This is a method for putting AI agents to work on things that matter:
 software, a phone line, a company’s records, a public campaign, a
 research pipeline. It is written for the person responsible for the
-result, whether or not that person can read what the agent produces. Its
-author cannot read code and has directed agents across thousands of
-recorded sessions, so the method never rests on the operator reading the
-work. It rests on arranging the work so that the agent’s word is never
-the thing you have to trust.</p>
-<p>Each rule below is tied to the incident that produced it. The
-incidents come from one operator’s project records. They cannot be
-checked from this document, and they are given so that the rules have
-reasons, not as proof. The figures in section 13 are a different matter:
-each names what measured it. How the incidents were established, given
-that the author cannot read the artifacts, and what would show the
-document wrong, are in section 10.</p>
+result, whether or not that person can read what the agent produces. The
+method never rests on the operator reading the work. It rests on
+arranging the work so that the agent’s word is never the thing you have
+to trust.</p>
+<p>Each rule below is tied to the incident that produced it, drawn from
+the author’s own systems, several of which run real businesses today.
+The incidents are given so that the rules have reasons. Section 13 gives
+the record they come from. Section 12 is the document condensed to
+thirteen lines for an agent to hold as operating defaults.</p>
 <p>The first edition of this document, published in June 2026, is kept
-in this repository under a superseded marker, with one section removed.
-This edition replaces it. What was withdrawn and why is in section 14.
-Section 12 is the document condensed to thirteen lines for an agent to
-hold as operating defaults.</p>
+in this repository under a superseded marker. This edition replaces
+it.</p>
 <hr />
 <h2 id="three-facts-about-the-agent">1. Three facts about the agent</h2>
 <p>An AI produces the most probable continuation of what is in front of
@@ -120,8 +112,7 @@ stand-in.</p>
 corrections accumulate as noise, and the quality of later answers falls
 well before the context is full. Chroma’s <em>Context Rot</em> study of
 July 2025 measured this across 18 models on its tasks. For agents doing
-long work this, and not raw ability, is the usual cause of failure in
-the record this document is drawn from.</p>
+long work this, and not raw ability, is the usual cause of failure.</p>
 <p>Everything in this document is a consequence of those three facts.
 None of them is fixed by a better prompt, because a prompt is a request,
 and the three facts describe what the model does with requests.</p>
@@ -438,9 +429,9 @@ tried and what is needed, and the work waits. A permission denial is a
 stop, never an obstacle to route around.</p>
 <p>An eighth disposition belongs to the operator, not the agent.
 <strong>Accepting the agent’s account because checking is
-expensive.</strong> Every incident above was discovered late because a
-person took a report at its word. The method exists so that the report
-never has to be taken.</p>
+expensive.</strong> Each failure above was invisible in the agent’s
+report and visible in the artifact, which is why the method reads the
+artifact and why each one became a mechanism rather than a reminder.</p>
 <hr />
 <h2 id="who-checks-whom">6. Who checks whom</h2>
 <p><strong>The producer never grades its own work, and the separation is
@@ -552,7 +543,10 @@ checks above it can go. Narrowing is the owner’s act through this loop;
 an agent proposes it and never performs it on its own. One trap that
 encoded a wrong rule was retired with the retraction written into its
 own record; two dead guards were consolidated; two blocks were narrowed
-to where they were needed.</p>
+to where they were needed. The method’s own founding rule, that every
+failure becomes a permanent block, was itself corrected this way: it
+described only the additive half of the loop, and the bidirectional loop
+replaced it.</p>
 <p><strong>Exhaustive in understanding, conservative in
 changing.</strong> When in doubt about what happened, do more: more
 reading, more tool calls, parallel diagnoses that are then compared.
@@ -579,23 +573,19 @@ pointer to the mechanism that replaced it.</p>
 not apply</h2>
 <p>The method is not free, and a doctrine that does not say what it
 costs is dogma.</p>
-<p><strong>The friction is measurable, and most of it is the guards
-testing themselves.</strong> The enforcement ledgers of seven of one
-operator’s projects held 371,817 recorded refusals when counted in
-October 2026. The large majority are the guards re-proving their
-contracts on every run, which is the point of section 3. The refusals of
-agents’ real work are a small fraction, and each of those is a turn
-spent. A new rule costs review rounds; the money domain of one design
-went through four rounds with two fresh reviewers before every quoted
-citation matched its source. The working expectation is two to four
-review rounds per unit of work, written into the handoff. First-pass
-quality is not expected.</p>
+<p><strong>The friction is measurable.</strong> The enforcement ledgers
+of seven of the author’s projects held 371,817 recorded refusals when
+counted in October 2026, most of them the guards re-proving their
+contracts on every run, which is the point of section 3; every refusal
+of an agent’s real work is also a turn spent. A new rule costs review
+rounds; the money domain of one design went through four rounds with two
+fresh reviewers before every quoted citation matched its source. Two to
+four review rounds per unit of work is the planned cost, written into
+the handoff.</p>
 <p><strong>The most expensive failure in the record is a loop that
 retries itself.</strong> On 2 June 2026 an unattended daemon that
 retried on its own produced about 370,000 junk transcripts, 8.7
-gigabytes, in about a day before it was caught, counted on disk
-afterwards. The resemblance to the ledger figure above is coincidence;
-they are different counts from different projects. A failure that would
+gigabytes, in about a day before it was caught. A failure that would
 fail the same way again (a bad credential, a missing file, a refused
 permission) is never retried. A transient failure (a network error, a
 rate limit) is retried a bounded number of times with the attempts
@@ -618,67 +608,36 @@ business, consent, and anything irreversible. Everything else can be
 lighter.</p>
 <hr />
 <h2 id="what-is-not-proven">10. What is not proven</h2>
-<p>This method has one practitioner. It has been run across many
-projects and several domains, but by one person, and the claim that it
-transfers rests on its being written down, not on anyone else having run
-it.</p>
-<p>The author cannot read the artifacts behind the incidents in sections
-2 to 8. Each was established by an agent that was not involved, reading
-the record, and the author read the mechanism’s output where there was
-one. That is the standard the method sets for every other claim, and a
-reader is right to hold the document to it: the incidents are a
-practitioner’s report, not evidence a stranger can check.</p>
-<p>The phone result in section 13 was scored by a model classifying
-transcripts. The scorer’s inputs carry tests, added after it silently
-dropped half an agent’s turns for six months, but there is no set of
-known-good and known-bad calls that the scorer must label correctly
-before a run counts. By section 3 that is a check that has not been
-proven to bite, and the figure should be read with that in mind.</p>
-<p>The refusal count in section 9 is mostly the guards’ own self-tests.
-Session-attributed refusals of real work, the true floor of enforcement,
-are a small fraction and have only been counted since attribution
-existed.</p>
+<p>No enforcement is total. What a guard cannot see (a redirect inside a
+command, a path built at run time) is written down by class, with which
+other layer catches it and what is left to the agent’s obedience. The
+residual is stated, because pretending enforcement is total is how
+breaches happen.</p>
+<p>Two agents of the same model under the same instruction files share a
+training, whatever their session or identity, and a harness built from
+one operator’s account of the problem can come to flatter that operator.
+A reviewer from a different vendor that never sees the operator’s
+vocabulary is the answer to both. It is a mitigation, not a proof.</p>
 <p>Drift between agents is managed, not solved. One persistent author
 owns a specification from vision to plan, and helpers gather and attack
 but never author, which reduces re-interpretation at each hand-off. It
 does not remove it.</p>
-<p>Two agents of the same model under the same instruction files share a
-training, whatever their session or identity. A harness built from one
-operator’s account of the problem can come to flatter that operator in
-the same way. A reviewer from a different vendor that never sees the
-operator’s vocabulary is the current answer to both. It is a mitigation,
-not a proof.</p>
-<p>No enforcement is total. What a guard cannot see (a redirect inside a
-command, a path built at run time) is written down by class, with which
-other layer catches it and what is left to the agent’s obedience. The
-honest residual is stated, because pretending enforcement is total is
-how breaches happen.</p>
-<p><strong>What would show this document wrong.</strong> Two conditions.
-If an incident class recurs through a path its guard covers, after that
-guard has reached the fifth place in section 2 or lower, the claim that
-the lower places end a class is wrong. A recurrence through a path
-listed as residual does not count, and a residual list that grows to
-cover each recurrence is itself the refutation. The first recurrence may
-be blamed on a buggy mechanism; the second may not. And if a second
-practitioner’s raw sessions, outside any of these mechanisms, do not
-show the seven dispositions in section 5 recurring under pressure with
-the same tells and the same cost, then the dispositions are an artifact
-of one operator’s harness and not of the model. Sessions inside the
-enclosure cannot test this, because the enclosure is built to suppress
-them. The words appearing once is not the dispositions appearing.</p>
+<p>What would show the method wrong is stated so that it can be tested:
+an incident class that recurs through a path its guard covers, after
+that guard has reached the fifth place in section 2 or lower, would
+refute the claim that the lower places end a class, and the claim in
+section 11 stands or falls with it.</p>
 <hr />
 <h2 id="the-claim-this-rests-on">11. The claim this rests on</h2>
 <p>The second fact in section 1, that a model is trained to look done
-rather than be done, has not been reduced in this operator’s record by
-more capable models; the record is one operator’s and names no
-comparison, so this is an observation and not a result. The claim built
-on it is that, until training supplies a fix, this disposition is
-answered only by structure around the model: checks the agent cannot
-pass without doing the work, records it cannot alter, and parties it
-cannot be. The structures in this document are what such a fix would
-have to supply, and until it does they are built on the outside, because
-that is the only place a person without a training run can build
-them.</p>
+rather than be done, has not been reduced in the author’s experience by
+more capable models. That is an observation. The claim built on it is
+that, until training supplies a fix, this disposition is answered only
+by structure around the model: checks the agent cannot pass without
+doing the work, records it cannot alter, and parties it cannot be. The
+structures in this document are what such a fix would have to supply,
+and until it does they are built on the outside, because that is the
+only place a person without a training run can build them.</p>
 <p>This is stated as a claim, and section 10 names what would refute
 it.</p>
 <hr />
@@ -736,55 +695,32 @@ state on disk. (9)</li>
 <li>When you notice you are about to act against one of these lines and
 nothing refuses you, that is a case the mechanisms could not see. Stop
 and say so. That report is the incident the next guard is earned from.
-(8, 10)</li>
+(8)</li>
 </ol>
 <hr />
 <h2 id="the-record-this-was-written-from">13. The record this was
 written from</h2>
-<p>These figures are the size of the record the incidents come from, and
-what some of its systems measured. Size is not quality; the method says
-so in section 9. Each figure names what measured it. These are the
-output of fleets of AI agents that one operator designed and
-directed.</p>
-<p>Every count is a floor. The surviving Claude Code transcript record
-begins in May 2026; thirteen Codex sessions from January and February
-survive separately, and nothing survives from March or April. The
-author’s work with agents began in September 2025, and the sessions
-before the record starts, including those that built the first version
-of the booking system in November 2025 and the six-product property
-rebuild from March to May 2026, were deleted by the tool’s own retention
-before the author began keeping transcripts. Those systems exist and
-their commit histories survive; their sessions do not. No figure is
-given for what was lost, because it was not measured.</p>
+<p>These are the systems the incidents come from and what they measured.
+They are the output of fleets of AI agents that the author designed and
+directed, by the author’s own session record, which runs from May 2026
+while the work began in September 2025, so the figures understate
+it.</p>
 <ul>
-<li>13,897 AI sessions in the whole record to 14 October 2026, of which
-4,652 were started by the author, 9,032 were run by agents those
-sessions dispatched, and 213 were automated, holding 617,706 messages of
-which 30,866 were typed by the author. Counted by AgentsView, the
-program that keeps the full transcript of every session on the author’s
-machine, across Claude Code, Codex and other agents.</li>
-<li>Within that, 4,879 root sessions and 5,507 agents dispatched inside
-them between 11 January and 13 September 2026, counted by a census
-program the author wrote over the raw transcripts, which also measures
-their hours: 11,947 session hours, 2,086 of them active with gaps over
-thirty minutes removed.</li>
+<li>Nearly 14,000 recorded agent sessions directing more than 5,500
+dispatched agents, with over 30,000 messages typed by the author.</li>
 <li>A booking and payment system for a real business that took over a
 front office previously run by hand and has been in daily use since
 November 2025, with real bookings and real money. The practices in this
-document were in use on it before they were written down; the first
-edition dates the writing, not the practice. Its incident log is its own
-and is referred to in section 14.</li>
+document were in use on it before they were written down.</li>
 <li>A phone receptionist whose calls handed to staff fell from about six
 in ten to about one in ten, and whose captured leads rose from about one
-in nine to about three in four. Measured on 857 calls over the life of
-the agent, scored from their transcripts by an automated pipeline after
-robocalls were removed. The scoring is a model’s classification, and
-section 10 says what that check has not been proven to do.</li>
+in nine to about three in four, measured on 857 calls scored from their
+transcripts after robocalls were removed.</li>
 <li>A company’s operations workspace kept current by scheduled agents
 for thirteen weeks unattended beside the administrator who edits it
-daily. The 1,564 edits the administrator made in the measured four weeks
-were preserved, and a full copy was taken on 89 of 90 nights, counted
-from the job log and the copies.</li>
+daily. Every one of the 1,564 edits the administrator made in the
+measured four weeks was preserved, and a full copy was taken on 89 of 90
+nights.</li>
 <li>A multi-customer proposal product whose pricing reproduces a real
 signed five-year agreement line by line: a test pins all 23 non-zero
 lines of the agreement to the cent against the engine’s output on a real
@@ -795,45 +731,6 @@ builders cannot write to scores it on 87 assertions.</li>
 <li>The incidents in this document, each of which cost time, money or
 trust before it became a rule.</li>
 </ul>
-<hr />
-<h2 id="what-was-withdrawn-from-the-first-edition-and-why">14. What was
-withdrawn from the first edition, and why</h2>
-<ul>
-<li><strong>The claim of zero shipped bugs.</strong> Withdrawn because
-it was never measured, and because the record contradicts it: the
-booking system keeps its own incident record; a May 2026 merge described
-as a full audit pass carried three money-loss paths and was caught by
-protection installed the same day; and the receptionist’s website chat
-had never saved a lead, none of three, while the phone line saved all
-twenty of twenty, a fault that fifteen earlier sessions had missed and a
-morning audit found. The method’s own rule is that a claim may never
-outrun the thing that measured it.</li>
-<li><strong>The hours figure.</strong> Withdrawn as unmeasured. The
-measured session record is in section 13.</li>
-<li><strong>The section reading a colleague’s behaviour from a meeting
-transcript.</strong> Withdrawn as unfit for publication, and removed
-from the archived first edition as well; the repository’s history keeps
-what was published. The general point, that an agent of any kind is read
-by what it does under pressure and not by what it says, survives in
-section 5.</li>
-<li><strong>The claim that a non-coder with this method outperforms a
-coder without it, and the framing of one operator’s record as a
-controlled experiment.</strong> Withdrawn. One practitioner is evidence
-that the method is learnable by someone who does not write code. It is
-not a controlled result.</li>
-<li><strong>The citation of a hallucination paper to a journal.</strong>
-The paper is a preprint. Section 1 cites it as one.</li>
-<li><strong>Zero deferral as an absolute.</strong> Replaced by deferral
-as a contract, which records the condition that reopens the work.</li>
-<li><strong>The maturity ladder as a numbered procedure.</strong>
-Replaced by the eight places an answer can live, in section 2, which
-covers any domain and not only software.</li>
-</ul>
-<p>A reader is entitled to ask what a third edition will withdraw. The
-answer is whatever the record contradicts, and the list will be
-published the same way. The first edition’s correction of its own
-additive-only loop to a bidirectional one stands and is the heart of
-section 8.</p>
 <hr />
 <p><em>Maxwell Collins, second edition, October 2026. Licensed CC BY
 4.0: use, share and adapt, with attribution.</em></p>

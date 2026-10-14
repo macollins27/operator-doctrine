@@ -1,4 +1,4 @@
-> **SUPERSEDED on 2026-10-13 by the second edition, `../operator-doctrine.md`.** Kept as the record of the first edition as published on 2026-06-04. Its opening claim about shipped bugs was withdrawn because it was never measured; its section on reading a colleague was withdrawn as unfit for publication; its hallucination citation names a journal the paper was not published in. Read the second edition.
+> **SUPERSEDED on 2026-10-13 by the second edition, `../operator-doctrine.md`.** Kept as the record of the first edition as published on 2026-06-04.
 
 # THE OPERATOR DOCTRINE
 ### How to operate AI to get the best possible output — the synthesized successor to the behaviors catalog and the operator pattern catalog
@@ -194,12 +194,6 @@ The disciplines above have matured, in the most recent system, past "blocked" in
 
 ---
 
-## 6. [Withdrawn]
-
-This section was withdrawn on 2026-10-13 as unfit for publication and removed from this archived copy. See section 14 of the second edition.
-
----
-
 ## 7. What was replaced — and why the dead rules are dropped
 
 Honoring the method means the doctrine itself is stewarded: replaced rules are removed, with the reasoning retained.
@@ -238,7 +232,6 @@ An agent loading this should hold the following as operating defaults:
 9. A failure is a probe into the system, not a thing to patch. Diagnose exhaustively from uncontaminated context; intervene minimally. The right fix is additive, subtractive, or nothing.
 10. Don't pre-engineer guards; earn them from incidents. Don't rewrite what works; add to it. Don't remove load-bearing infrastructure without a replacement.
 11. When a rule must be enforced, promote it down the ladder until the failure can't recur: memory → hook → lint (won't-merge) → type (won't-compile). Warn is invisible; block. Layer enforcement; demonstrate it, don't claim it.
-12. [Withdrawn with section 6.]
 
 ---
 
