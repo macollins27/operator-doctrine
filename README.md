@@ -1,6 +1,6 @@
 # The Operator Doctrine
 
-How to operate AI to get the best possible output — the synthesized successor to the behaviors catalog and the operator pattern catalog.
+How to get true work out of AI agents, in any field. Second edition, October 2026.
 
 **Read it online:** https://macollins27.github.io/operator-doctrine/
 
@@ -14,7 +14,9 @@ How to operate AI to get the best possible output — the synthesized successor 
 
 ## What this is
 
-A single, self-contained doctrine for operating AI agents at a high level — written for two readers at once: an AI agent ingesting it as an operating manual, and a human who wants to learn how to operate AI to get what they actually want.
+A method for putting AI agents to work on things that matter, written for the person responsible for the result, whether or not that person can read what the agent produces. One rule, the eight places an answer can live, the test of every check, the seven ways agents fail and what each became, who checks whom, what reaches a person, stewardship, cost, and what is not proven. Every rule carries the incident that paid for it.
+
+The first edition (June 2026) is kept under `editions/` with a superseded marker. Section 13 of the second edition lists what was withdrawn from it and why.
 
 ## License
 
